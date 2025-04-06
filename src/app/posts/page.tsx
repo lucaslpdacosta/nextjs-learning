@@ -13,6 +13,7 @@ interface ResponseProps {
 
 export default async function Posts() {
     const response = await fetch('https://dummyjson.com/posts',{
+        // cache: 'no-cache',
         cache: 'force-cache',
         next: {
             revalidate: 60
